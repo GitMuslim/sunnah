@@ -1,0 +1,257 @@
+/* ==UserStyle==
+@name Sunnah Catppuccin
+@namespace github.com/GitMuslim/sunnah
+@homepageURL https://github.com/GitMuslim/sunnah
+@version 1.0.0
+@updateURL https://github.com/GitMuslim/sunnah/raw/main/src/catppuccin.user.css
+@description Soothing pastel theme for Sunnah
+@author GitMuslim
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire*", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+@-moz-document regexp('^https?://(www\\.)?sunnah\\..*') {
+
+  @catppuccin: {
+    @latte:     { @rosewater: #dc8a78; @flamingo: #dd7878; @pink: #ea76cb; @mauve: #8839ef; @red: #d20f39; @maroon: #e64553; @peach: #fe640b; @yellow: #df8e1d; @green: #40a02b; @teal: #179299; @sky: #04a5e5; @sapphire: #209fb5; @blue: #1e66f5; @lavender: #7287fd; @text: #4c4f69; @subtext1: #5c5f77; @subtext0: #6c6f85; @overlay2: #7c7f93; @overlay1: #8c8fa1; @overlay0: #9ca0b0; @surface2: #acb0be; @surface1: #bcc0cc; @surface0: #ccd0da; @base: #eff1f5; @mantle: #e6e9ef; @crust: #dce0e8; }
+    @frappe:    { @rosewater: #f2d5cf; @flamingo: #eebebe; @pink: #f4b8e4; @mauve: #ca9ee6; @red: #e78284; @maroon: #ea999c; @peach: #ef9f76; @yellow: #e5c890; @green: #a6d189; @teal: #81c8be; @sky: #99d1db; @sapphire: #85c1dc; @blue: #8caaee; @lavender: #babbf1; @text: #c6d0f5; @subtext1: #b5bfe2; @subtext0: #a5adce; @overlay2: #949cbb; @overlay1: #838ba7; @overlay0: #737994; @surface2: #626880; @surface1: #51576d; @surface0: #414559; @base: #303446; @mantle: #292c3c; @crust: #232634; }
+    @macchiato: { @rosewater: #f4dbd6; @flamingo: #f0c6c6; @pink: #f5bde6; @mauve: #c6a0f6; @red: #ed8796; @maroon: #ee99a0; @peach: #f5a97f; @yellow: #eed49f; @green: #a6da95; @teal: #8bd5ca; @sky: #91d7e3; @sapphire: #7dc4e4; @blue: #8aadf4; @lavender: #b7bdf8; @text: #cad3f5; @subtext1: #b8c0e0; @subtext0: #a5adcb; @overlay2: #939ab7; @overlay1: #8087a2; @overlay0: #6e738d; @surface2: #5b6078; @surface1: #494d64; @surface0: #363a4f; @base: #24273a; @mantle: #1e2030; @crust: #181926; }
+    @mocha:     { @rosewater: #f5e0dc; @flamingo: #f2cdcd; @pink: #f5c2e7; @mauve: #cba6f7; @red: #f38ba8; @maroon: #eba0ac; @peach: #fab387; @yellow: #f9e2af; @green: #a6e3a1; @teal: #94e2d5; @sky: #89dceb; @sapphire: #74c7ec; @blue: #89b4fa; @lavender: #b4befe; @text: #cdd6f4; @subtext1: #bac2de; @subtext0: #a6adc8; @overlay2: #9399b2; @overlay1: #7f849c; @overlay0: #6c7086; @surface2: #585b70; @surface1: #45475a; @surface0: #313244; @base: #1e1e2e; @mantle: #181825; @crust: #11111b; }
+  }
+
+ #catppuccin(@lookup, @accent) {
+    @rosewater: @catppuccin[@@lookup][@rosewater];
+    @flamingo: @catppuccin[@@lookup][@flamingo];
+    @pink: @catppuccin[@@lookup][@pink];
+    @mauve: @catppuccin[@@lookup][@mauve];
+    @red: @catppuccin[@@lookup][@red];
+    @maroon: @catppuccin[@@lookup][@maroon];
+    @peach: @catppuccin[@@lookup][@peach];
+    @yellow: @catppuccin[@@lookup][@yellow];
+    @green: @catppuccin[@@lookup][@green];
+    @teal: @catppuccin[@@lookup][@teal];
+    @sky: @catppuccin[@@lookup][@sky];
+    @sapphire: @catppuccin[@@lookup][@sapphire];
+    @blue: @catppuccin[@@lookup][@blue];
+    @lavender: @catppuccin[@@lookup][@lavender];
+    @text: @catppuccin[@@lookup][@text];
+    @subtext1: @catppuccin[@@lookup][@subtext1];
+    @subtext0: @catppuccin[@@lookup][@subtext0];
+    @overlay2: @catppuccin[@@lookup][@overlay2];
+    @overlay1: @catppuccin[@@lookup][@overlay1];
+    @overlay0: @catppuccin[@@lookup][@overlay0];
+    @surface2: @catppuccin[@@lookup][@surface2];
+    @surface1: @catppuccin[@@lookup][@surface1];
+    @surface0: @catppuccin[@@lookup][@surface0];
+    @base: @catppuccin[@@lookup][@base];
+    @mantle: @catppuccin[@@lookup][@mantle];
+    @crust: @catppuccin[@@lookup][@crust];
+    @color: @catppuccin[@@lookup][@@accent];
+    
+    #site {
+        background: @base;
+    }
+    .indexsearchquery {
+        background-color: @surface0;
+        box-shadow: 0px 0px 9pt 2pt @surface0;
+    }
+    .indexsearchquery:focus {
+        box-shadow: 0px 0px 9pt 2pt @color;
+    }
+    .searchquery {
+        background-color: @surface0;
+        box-shadow: 0px 0px 9pt 2pt @surface0;
+    }
+    .searchquery:focus {
+        background-color: @surface0;
+        box-shadow: 0px 0px 9pt 2pt @color;
+    }
+    .collection_title {
+        background-color: @surface0;
+    }
+    .collection_sep {
+        background-color: @base;
+        -webkit-box-shadow: 0px 1px 2px 1px @base;
+    }
+    .collection_titles a {
+        color: @text;
+    }
+    .collection_titles a:hover {
+        color: @color;
+    }
+    .indexsearchsubmit, .searchsubmit {
+        color: @color;
+    }
+    .indexsearchtipslink {
+        color: @text;
+    }
+    .indexsearchtipslink:hover {
+        color: @color;
+    }
+    #header {
+        background: @mantle;
+    }
+    #toolbar {
+        background: @crust;
+    }
+    .crumbs {
+        background: @crust;
+        color: @text;
+    }
+    .crumbs a:visited {
+        color: @subtext0;
+    }
+    #toolbarRight a {
+        color: @text;
+    }
+    #toolbarRight {
+        color: @text;
+    }
+    .footer {
+        color: @text;
+        background: @crust;
+    }
+    .footer a {
+        color: @text;
+    }
+    #search a {
+        color: @text;
+    }
+    .title:nth-child(2n+1) {
+        background: @surface0
+    }
+    .title:nth-child(2n) {
+        background: @surface1
+    }
+    .title a {
+        color: @color;
+    }
+    .title a:hover {
+        color: @color;
+    }
+    .book_range {
+        color: @text;
+    }
+    .collection_info {
+        background: @surface0;
+        color: @text;
+    }
+    a {
+        color: @color;
+    }
+    .abouttitle {
+        color: @text;
+    }
+    .about {
+        color: @text;
+    }
+    #indextag {
+        color: @text;
+    }
+    #main > div:nth-child(6) {
+        color: @text !important;
+    }
+    .book_page_english_name {
+        color: @text;
+    }
+    .book_page_arabic_name {
+        color: @text;
+    }
+    .book_page_number {
+        color: @text;
+    }
+    .actualHadithContainer {
+        background-color: @surface0;
+    }
+    .hadith_narrated {
+        color: @color;
+    }
+    .hadith_reference a {
+        color: @color;
+    }
+    .text_details {
+        color: @text;
+    }
+    .arabic_text_details {
+        color: @text;
+    }
+    .hadith_annotation {
+        color: @text;
+    }
+    .hadith_reference {
+        color: @text;
+    }
+    .hadith_permalink {
+        color: @color;
+    }
+    .chapter {
+        background-color: @surface0;
+        color: @subtext0;
+    }
+    .arabic_sanad {
+        color: @subtext0;
+    }
+    .ebookintro {
+        color: @text;
+    }
+    .abookintro {
+        color: @text;
+    }
+    #languagePanel {
+        background: @surface0;
+        color: @text;
+    }
+    #sidePanel {
+        background: @base;
+    }
+    .deprecated_reference {
+        color: @subtext0;
+    }
+    .about a {
+        color: @color;
+    }
+    #w0 > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(1) {
+        color: @text;
+    }
+    #w0 > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) {
+        color: @text;
+    }
+    #w0 > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) {
+        color: @text;
+    }
+    #contactform-contacttext {
+        background-color: @surface0 !important;
+    }
+    input, textarea {
+        color: @text;
+    }
+    #contactform-name {
+        background-color: @surface0 !important;
+    }
+    #contactform-email {
+        background-color: @surface0 !important;
+    }
+    .btn {
+        background-color: @surface0 !important;
+        color: @text;
+    }
+    .field-contactform-email > div:nth-child(2) {
+        color: @text;
+    }
+  } 
+
+  @media (prefers-color-scheme: light) {
+    body {
+      #catppuccin(@lightFlavor, @accentColor);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      #catppuccin(@darkFlavor, @accentColor);
+    }
+  }
+
+}
