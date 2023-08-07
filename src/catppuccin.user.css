@@ -2,7 +2,7 @@
 @name Sunnah Catppuccin
 @namespace github.com/GitMuslim/sunnah
 @homepageURL https://github.com/GitMuslim/sunnah
-@version 1.0.0
+@version 1.0.1
 @updateURL https://github.com/GitMuslim/sunnah/raw/main/src/catppuccin.user.css
 @description Soothing pastel theme for Sunnah
 @author GitMuslim
@@ -240,6 +240,20 @@
     }
     .field-contactform-email > div:nth-child(2) {
         color: @text;
+    }
+    .bannerTop {
+        & when (@lookup = latte) {
+            background-image: url(https://raw.githubusercontent.com/GitMuslim/sunnah/main/assets/sunnah_latte.png)
+        }
+        & when (@lookup = frappe) {
+            background-image: url(https://raw.githubusercontent.com/GitMuslim/sunnah/main/assets/sunnah_frappe.png)
+        }
+        & when (@lookup = macchiato) {
+            background-image: url(https://raw.githubusercontent.com/GitMuslim/sunnah/main/assets/sunnah_macchiato.png)
+        }
+        & when (@lookup = mocha) {
+            background-image: url(https://raw.githubusercontent.com/GitMuslim/sunnah/main/assets/sunnah_mocha.png)
+        }
     }
   } 
 

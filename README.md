@@ -1,8 +1,8 @@
 <h3 align="center">
 	<picture>
-		<source srcset="./assets/sunnah_mocha.png" width="100" alt="Logo" media="(prefers-color-scheme: dark)"/>
-    <source srcset="./assets/sunnah_latte.png" width="100" alt="Logo" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
-    <img src="https://raw.githubusercontent.com/GitMuslim/sunnah/main/assets/sunnah_mocha.png" width="100" alt="Logo"/><br/>
+		<source srcset="./assets/sunnah_mocha.png" width="250" alt="Logo" media="(prefers-color-scheme: dark)"/>
+    <source srcset="./assets/sunnah_latte.png" width="250" alt="Logo" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+    <img src="https://raw.githubusercontent.com/GitMuslim/sunnah/main/assets/sunnah_mocha.png" width="250" alt="Logo"/><br/>
 	</picture>
 </h3>
 <h3 align="center">
