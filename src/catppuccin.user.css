@@ -2,7 +2,7 @@
 @name Sunnah Catppuccin
 @namespace github.com/GitMuslim/sunnah
 @homepageURL https://github.com/GitMuslim/sunnah
-@version 1.0.2
+@version 1.0.3
 @updateURL https://github.com/GitMuslim/sunnah/raw/main/src/catppuccin.user.css
 @description Soothing pastel theme for Sunnah
 @author GitMuslim
@@ -263,6 +263,10 @@
         & when (@lookup = mocha) {
             background-image: url(https://raw.githubusercontent.com/GitMuslim/sunnah/main/assets/sunnah_mocha.png)
         }
+    }
+    .button {
+        background: @surface0;
+        color: @color;
     }
   } 
 
