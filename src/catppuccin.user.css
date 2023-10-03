@@ -2,7 +2,7 @@
 @name Sunnah Catppuccin
 @namespace github.com/GitMuslim/sunnah
 @homepageURL https://github.com/GitMuslim/sunnah
-@version 1.0.4
+@version 1.0.5
 @updateURL https://github.com/GitMuslim/sunnah/raw/main/src/catppuccin.user.css
 @description Soothing pastel theme for Sunnah
 @author GitMuslim
@@ -62,6 +62,7 @@
         box-shadow: 0px 0px 9pt 2pt @color;
     }
     .searchquery {
+        color: @text !important;
         background-color: @surface0;
         box-shadow: 0px 0px 9pt 2pt @surface0;
     }
@@ -294,6 +295,21 @@
     }
     .englishcontainer, .arabic_hadith_full {
         color: @text;
+    }
+    .boh {
+        background-color: @surface0;
+    }
+    .boh:hover {
+        background-color: @surface1;
+    }
+    .bc_search {
+        color: @color;
+    }
+    .bc_search ~ .actualHadithContainer [class*="hadith_full"] b {
+        --highlight-color: fade(@color, 25%);
+    }
+    .AllHadith > span:nth-child(1) {
+        color: @color !important;
     }
   } 
 
