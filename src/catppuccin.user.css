@@ -2,7 +2,7 @@
 @name Sunnah Catppuccin
 @namespace github.com/GitMuslim/sunnah
 @homepageURL https://github.com/GitMuslim/sunnah
-@version 1.0.6
+@version 1.0.7
 @updateURL https://github.com/GitMuslim/sunnah/raw/main/src/catppuccin.user.css
 @description Soothing pastel theme for Sunnah
 @author GitMuslim
@@ -53,6 +53,9 @@
     
     #site {
         background: @base;
+    }
+    ::placeholder {
+        color: @subtext0;
     }
     .indexsearchquery {
         background-color: @surface0;
